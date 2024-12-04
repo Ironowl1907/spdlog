@@ -1,13 +1,12 @@
 project("SpdLog")
 kind("StaticLib")
 language("C++")
-languagedialect("C++17")
 staticruntime("on")
 warnings("off")
 
 targetdir("bin/%{prj.name}")
 objdir("bin-int/%{prj.name}")
-
+defines("SPDLOG_COMPILED_LIB")
 files({
 	"src/**.cpp",
 	"/include/**.h",
